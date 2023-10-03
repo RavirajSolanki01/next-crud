@@ -28,7 +28,7 @@ const TopicList = () => {
     };
 
     const handleDelete = async (id: string) => {
-        const res = await fetch(`${process.env.PORT}/api/topics?id=${id}`, {
+        const res = await fetch(`api/topics?id=${id}`, {
             method: "DELETE",
         });
         if (res.ok) {
