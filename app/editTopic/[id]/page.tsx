@@ -14,7 +14,7 @@ const EditTopic = ({ params }: { params: { id: string } }) => {
 
     const getTopics = async () => {
         try {
-            const res = await fetch(`api/topics/${params.id}`, {
+            const res = await fetch(`${process.env.PORT}/api/topics/${params.id}`, {
                 cache: "no-store",
             });
             if (!res.ok) {
