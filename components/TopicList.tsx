@@ -11,7 +11,6 @@ const TopicList = () => {
 
         getTopics();
     }, [])
-    console.log(topics, "Now Hey tnere");
     const getTopics = async () => {
         try {
             const res = await fetch(`/api/topics`, {

@@ -11,7 +11,7 @@ export default function Card({ id, title, description, onDelete }: ICardProps) {
 
     return (
         <div className="p-3 bg-slate-300 text-black ">
-            <div>
+            <div className="flex w-[100%] justify-between">
                 <p className="text-3xl">{title}</p>
                 <div className="flex gap-2">
                     <button onClick={() => onDelete(id)} className="bg-white p-2 rounded "  >Delete</button>
