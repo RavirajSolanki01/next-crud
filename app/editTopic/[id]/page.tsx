@@ -14,7 +14,7 @@ const EditTopic = ({ params }: { params: { id: string } }) => {
 
     const getTopics = async () => {
         try {
-            const res = await fetch(`editTopic/api/topics/${params.id}`, {
+            const res = await fetch(`${process.env.PORT!}/api/topics/${params.id}`, {
                 cache: "no-store",
             });
             if (!res.ok) {
@@ -27,7 +27,7 @@ const EditTopic = ({ params }: { params: { id: string } }) => {
             console.log("Error loading topics", error);
         }
     };
-console.log(process.env.BASE_URL, "process.env.BASE_URL!", process.env.BASE_URL!);
+console.log(process.env.PORT, "process.env.BASE_URL!", process.env.PORT!);
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();

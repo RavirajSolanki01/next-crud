@@ -14,7 +14,7 @@ const TopicList = () => {
     console.log(topics, "TOPICS");
     const getTopics = async () => {
         try {
-            const res = await fetch(`api/topics`, {
+            const res = await fetch(`${process.env.PORT!}/api/topics`, {
                 cache: "no-store",
             });
             if (!res.ok) {

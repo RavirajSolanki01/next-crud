@@ -15,7 +15,7 @@ const AddTopic = () => {
         }
 
         try {
-            const res = await fetch(`api/topics`, {
+            const res = await fetch(`${process.env.PORT!}api/topics`, {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",
