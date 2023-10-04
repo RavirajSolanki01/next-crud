@@ -11,7 +11,7 @@ const TopicList = () => {
 
         getTopics();
     }, [])
-    console.log(topics, "TOPICS");
+    console.log(topics, "Now Added");
     const getTopics = async () => {
         try {
             const res = await fetch(`${process.env.PORT!}/api/topics`, {
