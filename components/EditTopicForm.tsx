@@ -3,7 +3,6 @@ import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 const EditTopicForm = ({ id }: { id: string }) => {
-    const port = process.env.PORT;
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const router = useRouter()
@@ -35,7 +34,7 @@ const EditTopicForm = ({ id }: { id: string }) => {
             alert("Title and Description are required!");
         }
         try {
-            const res = await fetch(`api/topics/${id}`, {
+            const res = await fetch(`/api/topics/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json"
