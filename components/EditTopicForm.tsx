@@ -15,7 +15,7 @@ const EditTopicForm = ({ id }: { id: string }) => {
 
     const getTopics = async () => {
         try {
-            const res = await fetch(`${port}/api/topics/${id}`, {
+            const res = await fetch(`/api/topics/${id}`, {
                 cache: "no-store",
             });
             if (!res.ok) {
