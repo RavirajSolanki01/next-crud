@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 const EditTopic = ({ params }: { params: { id: string } }) => {
+    const port = process.env.PORT;
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const router = useRouter()
@@ -14,7 +15,7 @@ const EditTopic = ({ params }: { params: { id: string } }) => {
 
     const getTopics = async () => {
         try {
-            const res = await fetch(`${process.env.PORT!}/api/topics/${params.id}`, {
+            const res = await fetch(`${port}/api/topics/${params.id}`, {
                 cache: "no-store",
             });
             if (!res.ok) {

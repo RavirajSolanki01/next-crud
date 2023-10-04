@@ -11,10 +11,10 @@ const TopicList = () => {
 
         getTopics();
     }, [])
-    console.log(topics, "Now Added");
+    console.log(topics, "Now Hey tnere");
     const getTopics = async () => {
         try {
-            const res = await fetch(`${process.env.PORT!}/api/topics`, {
+            const res = await fetch(`/api/topics`, {
                 cache: "no-store",
             });
             if (!res.ok) {
